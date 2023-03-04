@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* .animate {
+    position: relative;
+    animation: move 2s ease-in-out cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+@keyframes move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  } */
+
+section.comic {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 50px 0;
+}
+
+section.profile {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 50px 0;
+}
+
+main div.jumbotron{
+    display: flex;
+    justify-content: center;
+}
+
+main div.jumbotron-image {
+    width: 100%;
+    background-image: url('../img/1.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 15rem;
+    animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change{
+    0%
+    {
+        background-image: url(../img/2.png);
+    }
+    20%
+    {
+        background-image: url(../img/3.jpg);
+    }
+    40%
+    {
+        background-image: url(../img/1.jpg);
+    }
+    60%
+    {
+        background-image: url(../img/4.png);
+    }
+    80%
+    {
+        background-image: url(../img/5.jpg);
+    }
+    100%
+    {
+        background-image: url(../img/2.png);
+    }
+}
+
+main div.jumbotron-description{
+    width: 70%;
+    background-color: #7eb14c;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-block: 15rem;
+    row-gap: 10px;
+}
+
+main div.jumbotron-description h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;   
+}
+
+main div.jumbotron-description p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main div.jumbotron-description a{
+    width: 40%;
+    background: transparent;
+    padding: 10px 24px;
+    border: 1px solid white;
+    border-radius: 20px;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main div.jumbotron-description a:hover{
+    background: white;
+    color: black;
+}
+
+main div.comic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    row-gap: 60px;
+  
+
+}
+
+main div.card-comic{
+    width: 45%;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+
+    display: flex;
+    align-items: stretch;
+    column-gap: 40px;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+
+
+main div.card-comic.show{
+    transform: translateX(0%);
+}
+
+main div.card-comic img{
+    width: 180px;
+    height: 370px;
+    object-fit: cover;
+}
+
+main article.card-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main article.card-description p{
+    text-align: justify;
+}
+
+main div.card-button {
+    display: flex;
+}
+
+main article.card-description button{
+    width: 180px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 2px 2px 4px rgba(44,62,80,0.6);
+}
+
+main article.card-description button:hover{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+header.navbar-container{
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    background: #1e1e1e;
+    z-index: 999;
+}
+
+header.navbar-container nav.nav-list{
+    display: flex;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+ 
+header .logo img{
+    width: 150px;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: white;
+    color: black;
+}
+
+aside {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside button {
+    width: 180px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    padding: 14px;
+    box-shadow: 2px 2px 4px rgba(44,62,80,0.6);
+}
+
+aside button:hover {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+div.modal-container {
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+div.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+div.modal-container .modal {
+    background-color: white;
+    width: 40%;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+    display: flex;
+    align-items: stretch;
+    column-gap: 40px;
+}
+
+div.modal-container .modal .modal-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.modal-container .modal img{
+    width: 150px;
+}
+
+div.modal-container .modal p {
+    text-align: justify;
+}
+
+div.modal-container .modal button {
+    width: 180px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    padding: 14px;
+    box-shadow: 2px 2px 4px rgba(44,62,80,0.6);
+}
+
+div.modal-container .modal button:hover {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #1e1e1e;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    main .jumbotron {
+        flex-direction: column;
+    }
+
+    main .jumbotron .jumbotron-description {
+        width: 100%;
+    }
+
+    main div.card-comic{
+        width: 45%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    main div.card-comic article.card-description{
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    main div.card-comic img{
+        width: 180px;
+        height: 270px;
+        object-fit: cover;
+    }
+
+    div.modal-container .modal {
+        width: 80%;
+    }
+}
+
+/* Small device (handphone, 576px and down) */
+@media screen and (max-width: 576px) {
+    main div.card-comic{
+        width: 70%;
+    }
+}
+
+/* Smallest device (handphone, 376px and down) */
+@media screen and (max-width: 376px) {
+    div.modal-container .modal {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.modal-container .modal .modal-description{
+        align-items: center;
+    }
+}
